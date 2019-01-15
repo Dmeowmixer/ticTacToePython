@@ -6,7 +6,8 @@ def display_board(board):
   print( board[1] + '|' + board[2] + '|' + board[3])
 
 test_board = ['#', 'X','O','X','O','X','O','X','O','X']
-display_board(test_board)
+game_board = ['', '', '','','','','','','','']
+display_board(game_board)
 
 playerOne = ''
 playerTwo = ''
@@ -29,8 +30,8 @@ place_marker(test_board, '$', 1)
 display_board(test_board)
 
 def win_check(board, mark):
-  print(board[2], board[4], board[6] + 'hello ' + mark)
+  print(board[2], board[4], board[6] + ' hello ' + mark)
   if board[2] == mark and board[4] == mark and board[6] == mark:
     print(mark + 'Wins THE GAME!')
 
-win_check(test_board, 'O')
+win_check(game_board, 'O')
