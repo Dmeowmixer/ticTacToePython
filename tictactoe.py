@@ -11,6 +11,7 @@ display_board(game_board)
 
 playerOne = ''
 playerTwo = ''
+
 def player_input():
   print('Player One Choose X or O')
   inputString = ''
@@ -26,11 +27,11 @@ player_input()
 def place_marker(board, marker, position):
   board[position] = marker
 
-place_marker(test_board, '$', 1)
-display_board(test_board)
+place_marker(game_board, playerOne, 1)
+display_board(game_board)
 
 def win_check(board, mark):
-  print(board[2], board[4], board[6] + ' hello ' + mark)
+  print(board[2], board[4], board[6] + mark)
   if board[2] == mark and board[4] == mark and board[6] == mark:
     print(mark + 'Wins THE GAME!')
 
