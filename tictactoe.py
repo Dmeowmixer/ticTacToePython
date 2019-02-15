@@ -31,22 +31,14 @@ display_board(game_board)
 
 
 def win_check(board, mark):
-  if board[2] == mark and board[5] == mark and board[8] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[1] == mark and board[4] == mark and board[7] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[3] == mark and board[6] == mark and board[9] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[1] == mark and board[5] == mark and board[9] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[3] == mark and board[5] == mark and board[7] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[1] == mark and board[2] == mark and board[3] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[4] == mark and board[5] == mark and board[6] == mark:
-    print(mark + 'Wins THE GAME!')
-  elif board[7] == mark and board[8] == mark and board[9] == mark:
-    print(mark + 'Wins THE GAME!')
-
+   if ((board[0] == mark and board[1] == mark and board[2] == mark) or
+        (board[3] == mark and board[4] == mark and  board[5] == mark) or 
+        (board[6] == mark and board[7] == mark and board[8] == mark) or 
+        (board[5] == mark and board[3] == mark and board[0] == mark) or
+        (board[7] == mark and board[4] == mark and board[1] == mark) or
+        (board[8] == mark and board[5] == mark and board[2] == mark) or
+        (board[0] == mark and board[4] == mark and board[9] == mark) or
+        (board[2] == mark and board[4] == mark and board[6] == mark)):
+        return 'Player '  + mark + ' has won!'
 
 win_check(game_board, 'O')
